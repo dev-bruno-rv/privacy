@@ -37,9 +37,24 @@
             padding-bottom: .3rem;
             margin-top: 2rem;
         }
+        h3 {
+            margin-top: 1rem;
+            color: #0b7dda;
+        }
         p {
             margin-bottom: 1rem;
             text-align: justify;
+        }
+        ul, ol {
+            margin: .6rem 0 1rem 1.25rem;
+        }
+        li { margin: .25rem 0; }
+        code {
+            background: #f1f5fb;
+            padding: .1rem .35rem;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: .95em;
         }
         footer {
             text-align: center;
@@ -48,6 +63,8 @@
             color: #666;
             margin-top: 2rem;
         }
+        a { color: #0b7dda; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -87,6 +104,58 @@
     <p>
         Si tienes preguntas sobre esta política de privacidad o el manejo de tu información,
         puedes contactarnos en: <strong>brunorodriguezvaca@gmail.com</strong>
+    </p>
+
+    <h2>6. Eliminación de datos</h2>
+    <p>
+        La app puede manejar información básica de cuenta (nombre y correo tras iniciar sesión con Google) y tu
+        <strong>progreso de lecciones</strong>. Esta información se almacena:
+    </p>
+    <ul>
+        <li><strong>Localmente en tu dispositivo</strong> (datos de sesión y progreso para funcionar sin conexión).</li>
+        <li>
+            <strong>En tu Google Drive</strong>, dentro de la carpeta privada <em>appDataFolder</em> (no visible en el explorador de archivos).
+            Ahí se guarda una copia de seguridad cifrada/serializada de tu base de datos (por ejemplo:
+            <code>writable_database.json</code>), únicamente accesible por esta aplicación.
+        </li>
+    </ul>
+
+    <h3>6.1 Borrar datos locales del dispositivo</h3>
+    <ul>
+        <li>Desde la app: usa la opción <em>“Eliminar datos / Restablecer”</em> si está disponible.</li>
+        <li>O desde el sistema: ve a <em>Ajustes &gt; Apps &gt; (nombre de la app)</em> y pulsa <em>“Almacenamiento &gt; Borrar datos”</em>.</li>
+        <li>Al desinstalar la app también se eliminan los datos locales.</li>
+    </ul>
+
+    <h3>6.2 Borrar la copia de seguridad en Google Drive (datos ocultos de la app)</h3>
+    <p>
+        La copia de seguridad se guarda en <em>appDataFolder</em> y no aparece en Mis archivos. Para eliminarla:
+    </p>
+    <ol>
+        <li>Abre <a href="https://drive.google.com/" target="_blank" rel="noopener">Google Drive</a> en un navegador.</li>
+        <li>Haz clic en el <strong>icono de rueda</strong> (arriba a la derecha) y entra en <strong>Configuración</strong>.</li>
+        <li>En el panel izquierdo, abre <strong>Administrar aplicaciones</strong> (en inglés: <em>Manage Apps</em>).</li>
+        <li>Busca la app (por ejemplo, <em>English Tutor</em> o el nombre con el que la instalaste).</li>
+        <li>En <strong>Opciones</strong>, elige <strong>Eliminar datos ocultos de la aplicación</strong> y confirma.</li>
+    </ol>
+    <p>
+        Esto borra todos los archivos que la app haya creado en tu <em>appDataFolder</em> (incluido
+        <code>writable_database.json</code>) y no afecta al resto de tu contenido de Drive.
+    </p>
+
+    <h3>6.3 Revocar el acceso de la app a tu cuenta de Google</h3>
+    <p>
+        Si además quieres impedir que la app siga creando copias de seguridad en el futuro:
+    </p>
+    <ol>
+        <li>Ve a <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+            myaccount.google.com/permissions</a> (Cuenta de Google &gt; Seguridad &gt; Acceso de terceros).</li>
+        <li>Selecciona la app y pulsa <strong>Retirar acceso</strong>.</li>
+    </ol>
+    <p>
+        Nota: revocar acceso no elimina automáticamente los datos existentes en Drive; para eso usa los pasos del punto 6.2.
+        Si necesitas ayuda con cualquiera de estos pasos, escríbenos a
+        <strong>brunorodriguezvaca@gmail.com</strong>.
     </p>
 </main>
 
