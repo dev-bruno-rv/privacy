@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Términos del Servicio — Language Learning</title>
+    <meta name="description" content="Términos del Servicio de Language Learning." />
+    <link rel="icon" href="logo-120.png">
+    <style>
+        body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+        header,footer{background:#0b1220;color:#e5e7eb}
+        .container{max-width:900px;margin:0 auto;padding:24px}
+        a{color:#60a5fa;text-decoration:none}
+        a:hover{text-decoration:underline}
+        main{background:#0f172a;color:#e5e7eb;min-height:100vh}
+        section{padding:10px 0}
+        h1{margin:0 0 8px}
+        h2{margin:16px 0 6px;font-size:18px}
+        p,li{color:#cbd5e1}
+        .note{font-size:12px;color:#94a3b8}
+        @media (prefers-color-scheme: light){
+            header,footer{background:#fff;color:#0f172a;border-bottom:1px solid #e5e7eb}
+            main{background:#fff;color:#0f172a}
+            p,li{color:#334155}
+            .note{color:#64748b}
+        }
+    </style>
+</head>
+<body>
+<header><div class="container">
+    <h1>Términos del Servicio</h1>
+    <div class="note">Última actualización: <span id="d"></span></div>
+</div></header>
+
+<main>
+    <div class="container">
+        <section>
+            <p>
+                Bienvenido a <b>Language Learning</b>. Al instalar y usar la aplicación aceptas estos
+                Términos del Servicio. Si no estás de acuerdo con alguna parte, por favor no uses la app.
+            </p>
+        </section>
+
+        <section>
+            <h2>1. Servicio</h2>
+            <p>
+                La app ofrece ejercicios de aprendizaje de inglés , incluyendo
+                actividades de escritura guiada, audio de apoyo y guardado de progreso.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Cuenta y acceso</h2>
+            <ul>
+                <li>Puedes iniciar sesión con tu cuenta de Google para guardar progreso.</li>
+                <li>Debes mantener la confidencialidad de tu cuenta y dispositivo.</li>
+                <li>Podemos suspender el acceso en caso de uso indebido o violación de estos términos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Uso de datos y Google APIs</h2>
+            <p>
+                Para respaldos utilizamos el alcance <code>https://www.googleapis.com/auth/drive.appdata</code>.
+                El contenido se guarda en la carpeta oculta <em>appData</em> de tu Google Drive y
+                solo lo usa la app para crear/restaurar copias de seguridad. Consulta la
+                <a href="./privacy.html">Política de Privacidad</a> para más detalles y cómo revocar permisos.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Contenido del usuario</h2>
+            <p>
+                El progreso y configuraciones son tuyos. Eres responsable del contenido que generes al usar la app.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Propiedad intelectual</h2>
+            <p>
+                Los textos de ejemplo, interfaces, diseños y demás materiales provistos por la app
+                son propiedad de sus respectivos titulares y están protegidos por las leyes aplicables.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Licencia de uso</h2>
+            <p>
+                Te otorgamos una licencia personal, limitada, revocable y no transferible para usar la app
+                conforme a estos términos y a la legislación vigente.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Limitación de responsabilidad</h2>
+            <p>
+                La app se ofrece “tal cual” y “según disponibilidad”. No garantizamos resultados de aprendizaje
+                específicos. En la medida máxima permitida por ley, no seremos responsables por daños indirectos,
+                incidentales o consecuentes derivados del uso de la app.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Modificaciones</h2>
+            <p>
+                Podemos actualizar estos términos. Publicaremos los cambios en esta página e indicaremos la fecha
+                de actualización. El uso continuado implica aceptación de los cambios.
+            </p>
+        </section>
+
+        <section>
+            <h2>9. Contacto</h2>
+            <p>
+                ¿Preguntas? Escríbenos a <a href="mailto:soporte@tu-dominio.com">soporte@tu-dominio.com</a>.
+            </p>
+        </section>
+
+        <p class="note">
+            Este texto no constituye asesoría legal. Adáptalo con tu abogado para cumplir las leyes aplicables
+            en tus jurisdicciones.
+        </p>
+    </div>
+</main>
+
+<footer><div class="container">
+    © <span id="y"></span> Language Learning · <a href="./privacy.html">Privacidad</a>
+</div></footer>
+<script>
+    const now=new Date();
+    document.getElementById('y').textContent=now.getFullYear();
+    document.getElementById('d').textContent=now.toLocaleDateString('es-ES');
+</script>
+</body>
+</html>

@@ -1,206 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Política de Privacidad</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Language Learning — Ejercicios de inglés A1–A2</title>
+    <meta name="description" content="Language Learning: ejercicios de inglés A1–A2 con escritura guiada, vocabulario práctico, audio y copias de seguridad en Google Drive." />
+    <link rel="icon" href="logo-120.png">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #f7f9fc;
-            color: #333;
-            line-height: 1.6;
+        :root{
+            --bg: #0b1220;
+            --ink: #0f172a;
+            --muted:#475569;
+            --card:#0f172a;
+            --primary:#22c55e;
+            --primary-ink:#072a16;
+            --ring:#22c55e33;
+            --surface:#0b1220;
+            --grad: radial-gradient(1200px 600px at 50% -10%, #22c55e22, transparent 60%),
+            radial-gradient(1000px 400px at 90% 10%, #60a5fa22, transparent 60%),
+            radial-gradient(1000px 400px at 10% 20%, #a78bfa22, transparent 60%);
         }
-        header {
-            background: linear-gradient(135deg, #007BFF, #00A8E8);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        *{box-sizing:border-box}
+        html,body{margin:0}
+        body{
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            color:#e5e7eb; background:var(--surface);
+            line-height:1.6;
+            background-image:var(--grad);
+            background-attachment: fixed;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
+        a{color:#93c5fd;text-decoration:none}
+        a:hover{text-decoration:underline}
+        .container{max-width:1000px;margin:0 auto;padding:24px}
+        header{
+            position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px);
+            background:linear-gradient(#0b1220dd,#0b1220bb);
+            border-bottom:1px solid #1f2937; z-index:10
         }
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .brand img{width:40px;height:40px;border-radius:10px}
+        .brand strong{font-weight:700}
+        .links{display:flex;gap:16px;flex-wrap:wrap}
+        .btn{
+            background:var(--primary); color:#052e16; border:none; padding:12px 18px;
+            border-radius:12px; font-weight:700; box-shadow:0 10px 30px var(--ring);
         }
-        h2 {
-            color: #007BFF;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: .3rem;
-            margin-top: 2rem;
+        .btn:hover{transform:translateY(-1px)}
+        .hero{padding:56px 0 30px}
+        .hero h1{font-size:clamp(28px, 4vw, 44px); margin:0 0 12px}
+        .hero p{color:#cbd5e1; margin:0 0 18px}
+        .badge{display:inline-block; font-size:12px; color:#a7f3d0; background:#065f4622;
+            border:1px solid #10b98144; border-radius:999px; padding:6px 10px; margin-bottom:14px}
+        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:26px 0}
+        .card{
+            background:linear-gradient(180deg,#0f172a,#0b1220);
+            border:1px solid #1f2937; border-radius:16px; padding:20px; height:100%;
+            box-shadow:0 0 0 1px #111827 inset, 0 10px 30px #00000033;
         }
-        h3 {
-            margin-top: 1rem;
-            color: #0b7dda;
+        .card h3{margin:0 0 6px;font-size:18px}
+        .muted{color:#94a3b8}
+        .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:26px 0}
+        .step{background:#0b1220; border:1px dashed #1f2937; border-radius:14px; padding:16px}
+        .step b{color:#86efac}
+        .cta{
+            margin:36px 0 10px; display:flex; gap:12px; flex-wrap:wrap; align-items:center
         }
-        p { margin-bottom: 1rem; text-align: justify; }
-        ul, ol { margin: .6rem 0 1rem 1.25rem; }
-        li { margin: .25rem 0; }
-        code {
-            background: #f1f5fb;
-            padding: .1rem .35rem;
-            border-radius: 4px;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size: .95em;
-        }
-        .callout {
-            background: #eef6ff;
-            border-left: 4px solid #0b7dda;
-            padding: .75rem 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-        }
-        a { color: #0b7dda; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            font-size: .9rem;
-            color: #666;
-            margin-top: 2rem;
+        footer{border-top:1px solid #1f2937; margin-top:26px; padding:22px 0; color:#94a3b8}
+        .mini{font-size:12px; color:#94a3b8}
+        @media (prefers-color-scheme: light){
+            body{color:#0f172a; background:#f8fafc}
+            header{background:#ffffffcc;border-bottom-color:#e5e7eb}
+            .card{background:#fff; border-color:#e5e7eb; box-shadow:0 6px 30px #00000010}
+            .step{background:#fff; border-color:#e5e7eb}
+            .muted{color:#475569}
+            footer{border-top-color:#e5e7eb; color:#64748b}
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>Política de Privacidad</h1>
-    <p>Protegemos tu información y tu voz</p>
+    <div class="container nav">
+        <div class="brand">
+            <img src="logo-120.png" alt="Logo Language Learning" />
+            <strong>Language Learning</strong>
+        </div>
+        <nav class="links">
+            <a href="./index.html">Inicio</a>
+            <a href="./privacy.html">Privacidad</a>
+            <a href="./terms.html">Términos</a>
+        </nav>
+    </div>
 </header>
 
-<main>
-    <h2>1. Uso del micrófono</h2>
-    <p>
-        Nuestra aplicación utiliza el micrófono exclusivamente para realizar ejercicios de pronunciación en inglés ("speaking").
-        El audio capturado se procesa en tiempo real para convertirlo en texto y evaluar tu desempeño.
-    </p>
+<main class="container">
+    <section class="hero">
+        <span class="badge">Inglés práctico A1–A2 · Ejercicios cortos y claros</span>
+        <h1>Aprende inglés con ejercicios <em>reales</em> y progresivos</h1>
+        <p>
+            Practica con actividades de <b>escritura guiada</b>, vocabulario del día a día y
+            oraciones simples. Audio de apoyo, pistas inteligentes y copias de seguridad en
+            <b>Google Drive (appData)</b> para que nunca pierdas tu progreso.
+        </p>
+        <div class="cta">
+            <a class="btn" href="#" onclick="alert('Próximamente en tu tienda de apps')">Descargar app</a>
+            <span class="mini">Compatible con Android. Progreso sincronizado en tu cuenta.</span>
+        </div>
+    </section>
 
-    <h2>2. No almacenamiento de audio</h2>
-    <p>
-        No grabamos, almacenamos ni compartimos el audio capturado. El procesamiento se realiza de manera temporal
-        y, una vez finalizado el ejercicio, la grabación deja de existir inmediatamente. No generamos ni guardamos
-        archivos de voz (como MP3, WAV u otros).
-    </p>
+    <section>
+        <div class="cards">
+            <article class="card">
+                <h3>Ejercicios tipo “Puzzle Writing”</h3>
+                <p class="muted">Completa oraciones A1–A2 ocultando solo lo necesario (pronombres, <em>to be</em>, preposiciones básicas). Mejora gramática sin abrumarte.</p>
+            </article>
+            <article class="card">
+                <h3>Audio y pronunciación</h3>
+                <p class="muted">Escucha cada ejemplo con voces nítidas. Refuerza <em>listening</em> y ritmo natural del idioma.</p>
+            </article>
+            <article class="card">
+                <h3>Vocabulario útil</h3>
+                <p class="muted">Situaciones reales: presentaciones, lugares, horarios, compras y más. Aprende lo que realmente usas.</p>
+            </article>
+            <article class="card">
+                <h3>Tu progreso, a salvo</h3>
+                <p class="muted">Guardado automático en <b>Google Drive › appData</b>. Cambia de dispositivo y continúa donde te quedaste.</p>
+            </article>
+        </div>
+    </section>
 
-    <h2>3. Procesamiento de datos</h2>
-    <p>
-        El reconocimiento de voz a texto es gestionado localmente en el dispositivo o a través de un servicio seguro
-        de terceros. El texto resultante no contiene información personal identificable y no se almacena en ninguna
-        base de datos propia de nuestros servidores.
-    </p>
+    <section>
+        <h2>Cómo funciona</h2>
+        <div class="how">
+            <div class="step"><b>1.</b> Elige un módulo (A1 → A2) y un tema: pronombres, <em>to be</em>, artículos, preposiciones, etc.</div>
+            <div class="step"><b>2.</b> Completa frases guiadas con pistas. Recibe retroalimentación inmediata.</div>
+            <div class="step"><b>3.</b> Escucha el audio, repite y guarda tu avance automáticamente.</div>
+        </div>
+    </section>
 
-    <h2>4. Seguridad y privacidad</h2>
-    <p>
-        Hemos implementado medidas técnicas y organizativas para garantizar que el uso del micrófono y el
-        procesamiento del audio se realicen de forma segura, protegiendo la privacidad del usuario en todo momento.
-    </p>
-
-    <h2>5. Contacto</h2>
-    <p>
-        Si tienes preguntas sobre esta política de privacidad o el manejo de tu información,
-        puedes contactarnos en: <strong>brunorodriguezvaca@gmail.com</strong>
-    </p>
-
-    <h2>6. Eliminación de datos</h2>
-    <p>
-        La app puede manejar información básica de cuenta (nombre y correo tras iniciar sesión con Google) y tu
-        <strong>progreso de lecciones</strong>. Esta información se almacena:
-    </p>
-    <ul>
-        <li><strong>Localmente en tu dispositivo</strong> (datos de sesión y progreso para funcionar sin conexión).</li>
-        <li>
-            <strong>En tu Google Drive</strong>, dentro de la carpeta privada <em>appDataFolder</em> (no visible en el explorador de archivos).
-            Ahí se guarda una copia de seguridad de tu base de datos (p. ej. <code>writable_database.json</code>), únicamente accesible por esta aplicación.
-        </li>
-    </ul>
-
-    <h3>6.1 Borrar datos locales del dispositivo</h3>
-    <ul>
-        <li>Desde la app: usa la opción <em>“Eliminar datos / Restablecer”</em> si está disponible.</li>
-        <li>O desde el sistema: ve a <em>Ajustes &gt; Apps &gt; (nombre de la app)</em> y pulsa <em>“Almacenamiento &gt; Borrar datos”</em>.</li>
-        <li>Al desinstalar la app también se eliminan los datos locales.</li>
-    </ul>
-
-    <h3>6.2 Borrar la copia de seguridad en Google Drive (datos ocultos de la app)</h3>
-    <p>
-        La copia de seguridad se guarda en <em>appDataFolder</em> y no aparece en “Mi unidad”. Para eliminarla:
-    </p>
-    <ol>
-        <li>Abre <a href="https://drive.google.com/" target="_blank" rel="noopener">Google Drive</a> en un navegador.</li>
-        <li>Haz clic en el <strong>icono de rueda</strong> y entra en <strong>Configuración</strong>.</li>
-        <li>En el panel izquierdo, abre <strong>Administrar aplicaciones</strong> (<em>Manage Apps</em>).</li>
-        <li>Busca la app (por ejemplo, <em>English Tutor</em>).</li>
-        <li>En <strong>Opciones</strong>, elige <strong>Eliminar datos ocultos de la aplicación</strong> y confirma.</li>
-    </ol>
-
-    <h3>6.3 Revocar el acceso de la app a tu cuenta de Google</h3>
-    <p>
-        Para impedir futuros accesos:
-    </p>
-    <ol>
-        <li>Ve a <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
-            myaccount.google.com/permissions</a> (Cuenta de Google &gt; Seguridad &gt; Acceso de terceros).</li>
-        <li>Selecciona la app y pulsa <strong>Retirar acceso</strong>.</li>
-    </ol>
-    <p class="callout">
-        Nota: revocar acceso no elimina automáticamente los datos existentes en Drive; para eso usa los pasos del punto 6.2.
-        Si necesitas ayuda, escríbenos a <strong>brunorodriguezvaca@gmail.com</strong>.
-    </p>
-
-    <!-- NUEVO: Sección para el enlace de “Eliminación de datos” de Google Play -->
-    <h2>7. Solicitud de eliminación de datos (requisito de Google Play)</h2>
-    <h3>7.1 Identificación</h3>
-    <p>
-        Esta política corresponde a la aplicación <strong>English Tutor</strong> (paquete <code>com.digitaldevs.languagelearning</code>),
-        publicada por <strong>Digital Devs</strong>.
-    </p>
-
-    <h3>7.2 ¿Cómo solicitar la eliminación?</h3>
-    <p>
-        Además de los pasos de los apartados 6.1–6.3, puedes pedirnos directamente la eliminación de tus datos asociados a la app:
-    </p>
-    <ol>
-        <li>Envía un correo a <a href="mailto:brunorodriguezvaca@gmail.com?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20datos%20-%20English%20Tutor&body=Hola%2C%20quiero%20solicitar%20la%20eliminaci%C3%B3n%20de%20mis%20datos%20asociados%20a%20la%20app%20English%20Tutor.%20Correo%20con%20el%20que%20inici%C3%A9%20sesi%C3%B3n%3A%20_____%0A%0AEntiendo%20que%20esto%20puede%20eliminar%20mi%20progreso%20y%20copias%20de%20seguridad.">
-            brunorodriguezvaca@gmail.com</a> indicando el correo con el que iniciaste sesión en la app.</li>
-        <li>Procesaremos la solicitud normalmente en un plazo de <strong>7 días</strong> y, como máximo, en <strong>30 días naturales</strong>.</li>
-        <li>Te confirmaremos por correo cuando la eliminación haya sido completada o si necesitamos información adicional para verificar tu identidad.</li>
-    </ol>
-
-    <h3>7.3 ¿Qué datos se eliminan o conservan? ¿Y por cuánto tiempo?</h3>
-    <ul>
-        <li><strong>Datos que se eliminan</strong>:
-            <ul>
-                <li>Progreso/estadísticas de lecciones almacenados localmente.</li>
-                <li>Copia de seguridad en tu <em>Google Drive &gt; appDataFolder</em> (p. ej. <code>writable_database.json</code>).</li>
-                <li>Tokens/credenciales de sesión guardados por la app (p. ej., en almacenamiento seguro del dispositivo).</li>
-            </ul>
-        </li>
-        <li><strong>Datos que NO conservamos en servidores propios</strong>:
-            no manejamos servidores propios con tu información personal; la app trabaja en tu dispositivo y, opcionalmente, en tu propio Google Drive.</li>
-        <li><strong>Retención</strong>:
-            <ul>
-                <li>Datos locales: permanecen hasta que el usuario los borra (p. ej., “Borrar datos” o desinstalación) o hasta que atendemos tu solicitud de eliminación.</li>
-                <li>Datos en Drive: permanecen hasta que el usuario los elimina siguiendo el punto 6.2 o hasta que los eliminemos al atender tu solicitud.</li>
-                <li>Tokens de acceso: caducan automáticamente (normalmente en ~1 hora); al eliminar datos revocamos/limpiamos credenciales.</li>
-            </ul>
-        </li>
-    </ul>
-
-    <p class="callout">
-        Si usas el enlace de eliminación (esta página) en Google Play, tendrás una vía para solicitar la eliminación
-        incluso si ya no puedes abrir la app.
-    </p>
+    <section class="cta">
+        <a class="btn" href="#" onclick="alert('Próximamente en tu tienda de apps')">Empezar ahora</a>
+        <span class="mini">¿Dudas? Lee la <a href="./privacy.html">Política de Privacidad</a> y los <a href="./terms.html">Términos</a>.</span>
+    </section>
 </main>
 
 <footer>
-    &copy; 2025 English Tutor. Todos los derechos reservados.
+    <div class="container">
+        © <span id="y"></span> Language Learning. ·
+        <a href="./privacy.html">Privacidad</a> · <a href="./terms.html">Términos</a>
+    </div>
 </footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
